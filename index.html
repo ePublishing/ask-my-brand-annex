@@ -335,7 +335,8 @@ function handleSearch(){
   }, 1200);
 }
 
-document.getElementById('searchInput').addEventListener('keydown', e => {
+const searchInput = document.getElementById('searchInput');
+if(searchInput) searchInput.addEventListener('keydown', e => {
   if(e.key === 'Enter') handleSearch();
 });
 
